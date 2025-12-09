@@ -1,0 +1,190 @@
+/* reset css */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #cccccc;
+    font-family: "Open Sans", sans-serif;
+    font-size: 100%; /* 16px (12pt) default font size | 1em is 100% default font size */
+    color: #000000;
+}
+
+h1{
+    padding-bottom: 10px;
+    font-size: 2.25em; /* 36px / 16px = 2.25em or 225%  */
+    font-weight: normal;
+}
+
+h2{
+    padding-bottom: 10px;
+    font-size: 2.125em; /* 34px */
+    font-weight: normal;
+}
+
+h3{
+    padding-bottom: 10px;
+    font-size: 2em; /* 32px */
+    font-weight: normal;
+}
+
+p{
+    padding-bottom: 10px;
+    line-height: 1.2;
+}
+
+/* ul{
+    padding-left: 40px;
+    margin-bottom: 16px;
+} */
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.container{
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    /* background-color: palevioletred; */
+    flex: 1 0 100%;
+    height: 200px;
+    background-image: url(../images/header-desktop.png);
+}
+
+nav{
+    background-color: paleturquoise;
+    flex: 1 0 100%;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    /* margin-bottom: 0; */
+}
+
+nav a:link, nav a:visited{
+    background-color: #757575;
+    text-decoration: none;
+    color: #fff;
+    /* width: 150px; */
+    display: block;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+nav a:hover, nav:active{
+    background-color: #333;
+}
+
+
+main{
+    background-color: palegreen;
+    flex: 1 1 70%; /* 800px - target / context = result */
+    padding: 5px 10px;
+}
+
+main h1{
+    color: red;
+}
+
+aside{
+    background-color: palegoldenrod;
+    flex: 1 1 30%; /* 400px - target / context (1200) = result */
+    padding: 5px 10px;
+}
+
+footer{
+    background-color: lavender;
+    flex: 1 0 100%;
+    padding: 10px;
+}
+
+
+/* media queries for tablet screens 800px or smaller */
+@media screen and (max-width: 800px){
+
+    body{
+        background-color: #333;
+    }
+
+    header{
+        
+        height: 100px;
+        background-image: url(../images/header-tablet.png);
+    }
+
+    nav a:link, nav a:visited{
+    
+        padding: 10px 20px;
+        margin-right: 20px;
+    
+}
+
+main{
+
+    flex: 1 1 60%; 
+}
+
+aside{
+    flex: 1 1 40%; 
+
+}
+
+} 
+
+/* media queries for mobile screens 600px or smaller */
+@media screen and (max-width: 600px){
+
+    body{
+        background-color: yellow;
+    }
+
+    header{
+        
+        height: 50px;
+        background-image: url(../images/header-mobile.png);
+        
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    nav ul{
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+    }
+
+    nav a:link, nav a:visited{
+
+    width: 100%;
+    text-align: center;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+}
+
+main, aside{
+    padding: 20px;
+}
+
+}
+
+footer{
+    text-align: center;
+
+}
